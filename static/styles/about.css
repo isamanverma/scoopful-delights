@@ -1,0 +1,71 @@
+p {
+    max-width: 80%;
+    margin: 2em auto;
+}
+ img{
+    max-width: 80%;
+    margin-bottom: 1em;
+ }
+
+
+.buy-btn {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.buy-btn button {
+    border: 0.15em solid var(--purple-color);
+    background-color: white;
+    outline: none;
+    padding: 0.75em 2em;
+    color: var(--purple-color);
+    font-size: larger;
+    border-radius: 34px;
+    font-weight: bold;
+    transition:
+        background-color 500ms ease,
+        border 500ms ease;
+}
+
+.buy-btn button:hover {
+    border: 0.15em solid white;
+
+    background-color: var(--purple-color);
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+footer {
+    padding: 1em;
+    color: var(--font-color-light);
+    background-color: var(--bg-color-dark);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer>div:nth-child(2) {
+    margin-top: 1em;
+    text-align: center;
+}
+
+@media screen and (min-width:500px) {
+    img {
+        max-width: 50%;
+    }
+
+    p {
+        max-width: 50%;
+        margin: 3em auto;
+    }
+
+    .spacer{
+        height: 20vh;
+    }
+}

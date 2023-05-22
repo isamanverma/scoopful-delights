@@ -1,0 +1,348 @@
+@font-face {
+    font-family: Brunel Poster;
+    src: url('../fonts/BrunelPoster-Roman.ttf');
+}
+
+@font-face {
+    font-family: Gloria Hallelujah;
+    src: url('../fonts/gloriahallelujah.ttf');
+}
+
+@font-face {
+    font-family: San Serif Shaded;
+    src: url('../fonts/SansSerifShaded.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gloria+Hallelujah&family=Homemade+Apple&family=Lexend:wght@300&family=Montserrat:wght@400;500&family=Poppins&family=Roboto&family=Roboto+Mono&display=swap');
+
+* {
+    --bg-color-dark: #242424;
+    --font-color-light: #f2f2f2;
+    --font-color-dark: #242424;
+    --purple-color: #6c19ff;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+}
+
+header {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    width: 100vw;
+    height: 25vh;
+    position: absolute;
+    background-image: url(../images/Hero-Background\ 1.jpeg);
+    object-fit: cover;
+    background-position: top;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 1em;
+
+}
+
+.top>nav ul {
+    background-color: var(--purple-color);
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+    border: 3px solid var(--font-color-light);
+    border-radius: 34px;
+    box-shadow: 2px 2px var(--bg-color-dark);
+    object-fit: contain;
+    padding: 0.1em 0.5em;
+}
+
+.navbar {
+    width: 54%;
+}
+
+img {
+    box-shadow: 0.4em 0.4em var(--bg-color-dark);
+}
+
+/* .account ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+} */
+
+.top>nav li {
+    padding: 0.3em;
+    min-width: fit-content;
+    list-style: none;
+}
+
+.top>nav li:hover {
+    text-decoration: underline;
+}
+
+
+.top>nav a {
+    color: var(--font-color-light);
+    text-decoration: none;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.title {
+    display: none;
+}
+
+
+.logo img {
+    box-shadow: none !important;
+    width: 60px;
+    aspect-ratio: 1/1;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.cta button {
+    background-color: var(--purple-color) !important;
+    color: var(--font-color-light) !important;
+    border: 0.1em solid var(--font-color-light) !important;
+}
+.cta button:hover{
+    background-color: var(--font-color-light) !important;
+    color: var(--bg-color-dark) !important;
+    border: 0.1em solid var(--font-color-dark) !important;
+}
+
+/* FOOTER  */
+
+.card svg {
+    height: 25px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e7e7e7;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    height: 50px;
+    width: 200px;
+
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transition: 0.25s linear;
+    z-index: 1;
+}
+
+.card::before {
+    content: "";
+    left: 0;
+    justify-content: flex-end;
+    background-color: var(--purple-color);
+}
+
+.card::after {
+    content: "";
+    right: 0;
+    justify-content: flex-start;
+    background-color: var(--purple-color);
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card:hover span {
+    opacity: 0;
+    z-index: -3;
+}
+
+.card:hover::before {
+    opacity: 0.5;
+    transform: translateY(-100%);
+}
+
+.card:hover::after {
+    opacity: 0.5;
+    transform: translateY(100%);
+}
+
+.card span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+    font-family: 'Fira Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+}
+
+.card .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.card .social-link svg {
+    text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+    transform: scale(1);
+}
+
+.card .social-link:hover {
+    background-color: rgba(249, 244, 255, 0.774);
+    animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+    40% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    padding: 1em;
+    color: var(--font-color-light);
+    background-color: var(--bg-color-dark);
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+}
+
+footer>div:nth-child(2) {
+    margin-top: 1em;
+    text-align: center;
+}
+
+@media screen and (min-width:500px) {
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+
+    p {
+        font-size: 1.2em;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    nav li {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        color: var(--bg-color-dark);
+    }
+
+    .navbar {
+        max-width: 300px;
+    }
+
+    /* .account ul {
+        max-width: 200px;
+    } */
+
+    .logo img {
+        display: none;
+    }
+
+    .title {
+        outline: 0.04em solid var(--font-color-light);
+        padding: 0.2em;
+        font-family: San Serif Shaded;
+        display: block;
+        font-size: 4vmax;
+        text-align: center;
+        color: var(--font-color-light);
+        text-shadow: 0.4em 0.4em 2em var(--bg-color-dark);
+        letter-spacing: -5px;
+    }
+
+    
+
+    .logo a {
+        text-decoration: none;
+    }
+
+    .spacer {
+        height: 1em;
+    }
+
+    header {
+        height: 45vh;
+    }
+
+    header::before {
+        height: 45vh;
+        background-position: center;
+    }
+}

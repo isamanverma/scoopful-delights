@@ -1,2 +1,2 @@
 # scoopful-delights
-Ice cream store web app
+Ice-cream store
