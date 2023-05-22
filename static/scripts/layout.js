@@ -3,7 +3,11 @@ const imagePaths = [
     '../images/Hero-Background-1.jpeg',
     '../images/Hero-Background-2.jpeg',
     '../images/Hero-Background-3.jpeg',
-    '../images/Hero-Background-4.jpeg'
+    '../images/Hero-Background-4.jpeg',
+    '../images/Hero-Background-5.jpeg',
+    '../images/Hero-Background-6.jpeg',
+    '../images/Hero-Background-7.jpeg',
+
   ];
   
   function updateBackgroundImage(images) {
