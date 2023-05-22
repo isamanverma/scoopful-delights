@@ -7,6 +7,9 @@ const imagePaths = [
     '../images/Hero-Background-5.jpeg',
     '../images/Hero-Background-6.jpeg',
     '../images/Hero-Background-7.jpeg',
+    '../images/Hero-Background-8.jpeg',
+    '../images/Hero-Background-9.jpeg',
+    '../images/Hero-Background-10.jpeg',
 
   ];
   
