@@ -44,15 +44,15 @@ header::before {
     width: 100vw;
     height: 25vh;
     position: absolute;
-    background-image: url(../images/Hero-Background\ 1.jpeg);
+    background-image: var(--hero-background);
     object-fit: cover;
     background-position: top;
     top: 0;
     left: 0;
     z-index: -1;
     filter: brightness(50%);
-}
-
+  }
+  
 .top {
     display: flex;
     flex-direction: row;
