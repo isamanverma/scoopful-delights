@@ -106,6 +106,10 @@ h2 {
     color: white;
 }
 
+.site-links h2 {
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 @media screen and (min-width:500px) {
     .menu {
         grid-template-columns: repeat(2, 1fr);
@@ -124,9 +128,11 @@ h2 {
         margin-right: 2em;
     }
 
+    
+
 }
 
-@media screen and (min-width:501px) and (max-width:1350px){
+@media screen and (min-width:501px) and (max-width:1350px) {
     .menu {
         grid-template-columns: repeat(1, 1fr);
         gap: 2em 1em;

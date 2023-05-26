@@ -51,8 +51,8 @@ header::before {
     left: 0;
     z-index: -1;
     filter: brightness(50%);
-  }
-  
+}
+
 .top {
     display: flex;
     flex-direction: row;
@@ -72,6 +72,7 @@ header::before {
     box-shadow: 2px 2px var(--bg-color-dark);
     object-fit: contain;
     padding: 0.1em 0.5em;
+    width: 100%;
 }
 
 .navbar {
@@ -132,7 +133,8 @@ img {
     color: var(--font-color-light) !important;
     border: 0.1em solid var(--font-color-light) !important;
 }
-.cta button:hover{
+
+.cta button:hover {
     background-color: var(--font-color-light) !important;
     color: var(--bg-color-dark) !important;
     border: 0.1em solid var(--font-color-dark) !important;
@@ -267,18 +269,49 @@ img {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 1em;
     color: var(--font-color-light);
     background-color: var(--bg-color-dark);
     position: relative;
     bottom: 0;
     left: 0;
-
+    height: 40vh;
 }
 
-footer>div:nth-child(2) {
-    margin-top: 1em;
+.branding>.footer-logo {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    aspect-ratio: 1/1;
+}
+
+.branding>.footer-logo img {
+    box-shadow: none !important;
+}
+
+footer div:nth-child(2) {
+    margin: 1em;
+}
+
+map {
+    display: none;
+}
+
+.site-links h2 {
     text-align: center;
+}
+
+.site-links a:nth-child(2),
+a:nth-child(3) {
+    display: flex;
+    justify-content: space-around;
+}
+
+.site-links a {
+    color: white;
 }
 
 @media screen and (min-width:500px) {
@@ -327,7 +360,7 @@ footer>div:nth-child(2) {
         letter-spacing: -5px;
     }
 
-    
+
 
     .logo a {
         text-decoration: none;
@@ -344,5 +377,39 @@ footer>div:nth-child(2) {
     header::before {
         height: 45vh;
         background-position: center;
+    }
+
+    footer {
+        height: 40vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    footer>map {
+        object-fit: contain;
+        display: block;
+    }
+
+
+    .branding>.footer-logo {
+        margin: 0 auto;
+        display: contents;
+        align-items: center;
+        aspect-ratio: 1/1;
+    }
+
+    .branding>.footer-logo img{
+        width: 25%;
+        aspect-ratio: 1/1;
+    }
+    .branding {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #copy-right-text {
+        margin: 0;
     }
 }
