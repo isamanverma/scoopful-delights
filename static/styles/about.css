@@ -2,10 +2,11 @@ p {
     max-width: 80%;
     margin: 2em auto;
 }
- img{
+
+img {
     max-width: 80%;
     margin-bottom: 1em;
- }
+}
 
 
 .buy-btn {
@@ -41,13 +42,17 @@ p {
 
 
 footer {
-    padding: 1em;
     color: var(--font-color-light);
     background-color: var(--bg-color-dark);
     position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+.footer-about p {
+    margin: 0 auto;
+    text-align: left;
 }
 
 footer>div:nth-child(2) {
@@ -65,7 +70,7 @@ footer>div:nth-child(2) {
         margin: 3em auto;
     }
 
-    .spacer{
+    .spacer {
         height: 20vh;
     }
 }
