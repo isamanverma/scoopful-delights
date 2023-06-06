@@ -24,6 +24,7 @@ Scoopful Delights is a static ice cream website that showcases a wide range of d
 - HTML
 - CSS
 - JavaScript
+- MongoDB
 
 ## Installation
 
